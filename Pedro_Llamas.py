@@ -29,6 +29,7 @@ h1, h2, h3, h4, h5, h6 {
 
 container = st.container()
 with container:
+    
     st.markdown(
         """
         <div style='background-color: #85C1E9; border-radius: 10px; padding: 20px; text-align: center; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); margin-top: 20px; margin-left: auto; margin-right: auto; width: 60%;'>
@@ -41,18 +42,13 @@ with container:
         unsafe_allow_html=True
     )
 
-with container:
+    col1, col2, col3 = st.columns(3)
+
+    with col3:
         st.markdown("""  """)
-        st.markdown(
-        """
-        <div style='display: flex; justify-content: center;'>
-            <img src="img/imagen_cv.png" width="150" style='margin: auto;'>
-        </div>
-        """,
-        unsafe_allow_html=True
-        )
+        st.image("img/cv.png", width=150)
         # Lee el archivo PDF en formato binario
-        with open('data/PEDRO LLAMAS LÓPEZ CV.pdf', 'rb') as f:
+        with open('data/PEDRO LLAMAS LÓPEZ CV.pdf', 'rb') as f:
             pdf_data = f.read()
 
         # Codifica el archivo PDF en base64
@@ -64,7 +60,6 @@ with container:
         # Muestra el enlace de descarga en Streamlit
         st.markdown(href, unsafe_allow_html=True)
 
-with container:
     st.markdown(
         """
         <div style='background-color: #85C1E9; border-radius: 10px; padding: 20px; text-align: center; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); margin-top: 20px; margin-left: auto; margin-right: auto; width: 60%;'>
