@@ -29,7 +29,6 @@ h1, h2, h3, h4, h5, h6 {
 
 container = st.container()
 with container:
-    
     st.markdown(
         """
         <div style='background-color: #85C1E9; border-radius: 10px; padding: 20px; text-align: center; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); margin-top: 20px; margin-left: auto; margin-right: auto; width: 60%;'>
@@ -58,6 +57,7 @@ href = f'<a href="data:application/pdf;base64,{b64_pdf}" download="cv.pdf">Desca
 # Muestra el enlace de descarga en Streamlit
 st.markdown(href, unsafe_allow_html=True)
 
+with container:
     st.markdown(
         """
         <div style='background-color: #85C1E9; border-radius: 10px; padding: 20px; text-align: center; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); margin-top: 20px; margin-left: auto; margin-right: auto; width: 60%;'>
