@@ -42,8 +42,15 @@ with container:
     )
 
 with container:
-        st.markdown("""  """)
-        st.image("img/imagen_cv.png", width=150)
+    st.markdown("""  """)
+    st.markdown(
+        """
+        <div style='display: flex; justify-content: center;'>
+            <img src="img/imagen_cv.png" width="150" style='margin: auto;'>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
         # Lee el archivo PDF en formato binario
         with open('data/PEDRO LLAMAS LÓPEZ CV.pdf', 'rb') as f:
             pdf_data = f.read()
