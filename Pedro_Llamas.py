@@ -42,23 +42,21 @@ with container:
         unsafe_allow_html=True
     )
 
-    col1, col2, col3 = st.columns(3)
 
-    with col3:
-        st.markdown("""  """)
-        st.image("img/cv.png", width=150)
-        # Lee el archivo PDF en formato binario
-        with open('data/PEDRO LLAMAS LÓPEZ CV.pdf', 'rb') as f:
-            pdf_data = f.read()
+st.markdown("""  """)
+st.image("img/imagen_cv.png", width=150)
+# Lee el archivo PDF en formato binario
+with open('data/PEDRO LLAMAS LÓPEZ CV.pdf', 'rb') as f:
+    pdf_data = f.read()
 
-        # Codifica el archivo PDF en base64
-        b64_pdf = base64.b64encode(pdf_data).decode('utf-8')
+# Codifica el archivo PDF en base64
+b64_pdf = base64.b64encode(pdf_data).decode('utf-8')
 
-        # Genera el enlace de descarga para el archivo PDF
-        href = f'<a href="data:application/pdf;base64,{b64_pdf}" download="cv.pdf">Descargar mi CV en PDF</a>'
+# Genera el enlace de descarga para el archivo PDF
+href = f'<a href="data:application/pdf;base64,{b64_pdf}" download="cv.pdf">Descargar mi CV en PDF</a>'
 
-        # Muestra el enlace de descarga en Streamlit
-        st.markdown(href, unsafe_allow_html=True)
+# Muestra el enlace de descarga en Streamlit
+st.markdown(href, unsafe_allow_html=True)
 
     st.markdown(
         """
