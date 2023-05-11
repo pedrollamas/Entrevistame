@@ -48,7 +48,7 @@ with container:
         st.markdown("""  """)
         st.image("img/cv.png", width=150)
         # Lee el archivo PDF en formato binario
-        with open('data/PEDRO LLAMAS LÓPEZ CV.pdf', 'rb') as f:
+        with open('data/PEDRO LLAMAS LÓPEZ CV.pdf', 'rb') as f:
             pdf_data = f.read()
 
         # Codifica el archivo PDF en base64
