@@ -46,7 +46,7 @@ with container:
 
     with col3:
         st.markdown("""  """)
-        st.image("img/cv.png", width=150)
+        st.image("img/Imagen_CV_Pedro_Llamas.png", width=150)
         # Lee el archivo PDF en formato binario
         with open('data/PEDRO LLAMAS LÓPEZ CV.pdf', 'rb') as f:
             pdf_data = f.read()
